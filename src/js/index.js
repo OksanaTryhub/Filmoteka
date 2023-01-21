@@ -152,7 +152,7 @@ function renderMovieDetails(data) {
   console.log(data);
   backdrop.classList.remove('is-hidden');
   const content = `
-  
+  <button class="movie-detail__close-button" type="button">X</button>
   <img class="movie-detail__image" ${
     data.poster_path
       ? 'src="https://image.tmdb.org/t/p/w300' + data.poster_path + '">'

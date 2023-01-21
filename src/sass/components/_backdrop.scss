@@ -3,7 +3,7 @@
   min-height: 100%;
   opacity: 1;
   visibility: visible;
-  background-color: rgba(43, 43, 43, 0.8);
+  background-color: #81818166;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +25,10 @@
   font-size: 12px;
   line-height: 1.33;
 }
+
+// .movie-detail__close-button {
+
+// }
 
 .movie-detail__image {
   width: 240px;
