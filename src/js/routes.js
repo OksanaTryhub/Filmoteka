@@ -6,9 +6,9 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const routes = {
   '/': home,
-  '/project-group-5-js/': home,
+  '/Filmoteka/': home,
   '/library': library,
-  '/project-group-5-js/library': library,
+  '/Filmoteka/library': library,
 };
 
 const route = window.location.pathname;
