@@ -1,0 +1,124 @@
+.dark {
+  background: $bgDarkTheme;
+}
+.dark .footer {
+  background-color: #2b2727;
+  color: #baaeae;
+}
+
+.dark .movie-info {
+  background-color: #2b2727;
+}
+.dark .movie-detail__about-text {
+  color: #fefefe;
+}
+.dark .movie-detail__about {
+  color: #fefefe;
+}
+.dark .movie-detail__info {
+  color: #fefefe;
+}
+.dark .movie-detail__title {
+  color: #fefefe;
+}
+.dark .pagination__button {
+  background-color: transparent;
+  color: #fff;
+}
+
+.dark .pagination__button.back {
+  background-color: transparent;
+
+  &::after {
+    background-image: url('./../images/svg/arrow-left-dark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.dark .pagination__button.forward {
+  background-color: transparent;
+
+  &::after {
+    background-image: url('./../images/svg/arrow-right-dark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.dark .icon__close {
+  fill: $headerTextColor;
+}
+.dark .current {
+  background-color: $btnActiveColor;
+}
+
+.dark .movie__title {
+  color: #baaeae;
+}
+.navigation__wrap {
+  position: relative;
+}
+.switch-wrap {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -61px;
+  bottom: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  background-color: transparent;
+}
+.dark .movie-votes {
+  color: #2b2727;
+}
+.dark .movie-votes {
+  color: #2b2727;
+}
+
+.dark .ellipsis {
+  color: #fefefe;
+}
+.switch-wrap:hover .material-icons {
+  text-shadow: 0 0 10px #ff6b08, 0 0 20px #ff6b08, 0 0 30px #ff6b08,
+    0 0 40px #ff6b08, 0 0 70px #ff6b08, 0 0 80px #ff6b08, 0 0 100px #ff6b08,
+    0 0 150px #ff6b08;
+}
+.material-icons {
+  color: $headerTextColor;
+}
+.dark .hystmodal__window {
+  background-color: #2b2727;
+}
+
+.dark .hystmodal__title,
+.dark .hystmodal__subtitle,
+.dark .hystmodal__text,
+.dark .hystmodal__icon {
+  @include animation(color, box-shadow, null);
+  color: #fefefe;
+}
+
+.hystmodal__item {
+  @include animation(color, box-shadow, null);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hystmodal__item:hover,
+.hystmodal__item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.dark .hystmodal__item:hover,
+.dark .hystmodal__item:focus {
+  box-shadow: 0px 0px 8px 0px #ff6b08;
+}
+
+.dark .hystmodal__item:hover .hystmodal__title,
+.dark .hystmodal__item:hover .hystmodal__subtitle,
+.dark .hystmodal__item:hover .hystmodal__text,
+.dark .hystmodal__item:hover .hystmodal__icon {
+  color: #ff6b08;
+}

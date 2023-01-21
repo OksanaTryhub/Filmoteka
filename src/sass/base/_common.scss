@@ -1,0 +1,52 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include mobile {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    max-width: 1280px;
+  }
+}
+// padding-top: 20px;
+// padding-bottom: 40px;
+// @media screen and (max-width: 767px) {
+//   min-width: 320px;
+// }
+// @media screen and (min-width: 768px) {
+//   padding-left: 32px;
+//   padding-right: 32px;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+// }
+// @media screen and (min-width: 1280px) {
+//   max-width: 1280px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding-left: 32px;
+//   padding-right: 32px;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+// }
+.js-show {
+  visibility: visible;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}

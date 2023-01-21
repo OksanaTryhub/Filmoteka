@@ -1,0 +1,75 @@
+.card__colection {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    // padding-top: 60px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+}
+.card__film {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms linear;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @media screen and (min-width: 1024px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}
+
+.card__film:hover,
+.card__film:focus {
+  transform: scale(1.03);
+}
+
+.card__film img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 402px;
+  @media screen and (min-width: 768px) {
+    height: 398px;
+  }
+}
+.card__title,
+.card__text {
+  @include font(500, 12px, 1.33, $color);
+  font-family: 'Roboto', sans-serif;
+}
+.card__title {
+  text-transform: uppercase;
+  color: $mainTextColor;
+}
+.card__text {
+  color: $accentColor;
+}
+.thumb {
+  position: relative;
+}
+.card__vote_average {
+  @include font(500, 15px, 1.17, $headerTextColor);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: $accentColor;
+  border-radius: 5px;
+}

@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="container container--header">
+    <nav class="navigation header__navigation">
+      <a href="./" lang="en" class="logo header__logo">
+        <svg class="logo__icon" width="24" height="24">
+          <use href="./images/svg/sprite.svg#logo-film"></use>
+        </svg>
+        <span class="logo__text">Filmoteka</span>
+      </a>
+      <div class="navigation__wrap">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link header__menu-link" href="./" id="home">
+              Home
+              <!-- <button class="navigation__btn">Home</button> -->
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__link header__menu-link"
+              href="./library"
+              id="library"
+            >
+              <!-- <button class="navigation__btn">My library</button> -->
+              My library</a
+            >
+          </li>
+        </ul>
+        <div class="switch-wrap">
+          <a href="#" class="themetoggle">
+            <span class="material-icons">wb_sunny</span></a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="js-library-buttons-wrap js-library-buttons-block">
+      <div class="header__wrap--btn">
+        <button class="header__btn js-watched" type="button">WATCHED</button>
+        <button class="header__btn js-queue" type="button">QUEUE</button>
+      </div>
+    </div>
+    <div class="header__wrap header__wrap--form">
+      <form action="" name="subscribe" class="search-form js-search-form">
+        <input
+          type="text"
+          name="search"
+          placeholder="Movie search"
+          class="search-form__input js-search-form__input"
+        />
+        <button type="submit" class="search-form__button">
+          <svg class="form__icon" width="12" height="12">
+            <use href="./images/svg/sprite.svg#symbol-search"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="header__warning">
+        Search result not successful. Enter the correct movie name.
+      </p>
+    </div>
+    <!-- <div class="header__wrap header__wrap--btn visually-hidden">
+      <button class="header__btn" type="button">Watched</button>
+      <button class="header__btn header__btn--active highlighted" type="button">
+        Queue
+      </button>
+    </div> -->
+    <!-- <div class="switch-wrap">
+      <a href="#" class="themetoggle">
+        <span class="material-icons">wb_sunny</span></a
+      >
+    </div> -->
+  </div>
+</header>

@@ -1,27 +1,28 @@
 {
-  "name": "parcel-project-template",
+  "name": "Filmoteka",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/OksanaTryhub/Filmoteka",
+  "homepage": "https://oksanatryhub.github.io/Filmoteka/",
   "scripts": {
     "start": "parcel src/*.html --open",
     "build": "parcel build src/*.html --public-url /Filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OksanaTryhub/Filmoteka.git"
+    "url": "git+https://oksanatryhub.github.io/Filmoteka/"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/OksanaTryhub/Filmoteka/issues"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
     "axios": "^1.2.1",
+    "express-handlebars": "^6.0.6",
+    "hystmodal": "^0.5.1",
     "modern-normalize": "^1.1.0",
-    "notiflix": "^3.2.5",
-    "simplelightbox": "^2.11.0"
+    "notiflix": "^3.2.5"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

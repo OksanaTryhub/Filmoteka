@@ -1,0 +1,245 @@
+.header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header--home {
+  background-image: url(../images/main-header-bg/main-bg-320.jpg);
+  height: 230px;
+  @include retina {
+    background-image: url(../images/main-header-bg/main-bg-320@2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/main-header-bg/main-bg-768.jpg);
+
+    @include retina {
+      background-image: url(../images/main-header-bg/main-bg-768@2x.jpg);
+    }
+    height: 216px;
+  }
+
+  @mixin desktop {
+    background-image: url(../images/main-header-bg/main-bg-1280.jpg);
+
+    @include retina {
+      background-image: url(../images/main-header-bg/main-bg-1280@2x.jpg);
+    }
+  }
+}
+
+.container--header {
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.header--library {
+  position: relative;
+  height: 230px;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.56);
+  background-image: url(../images/library-mobile-min.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include retina {
+    background-image: $bg-header-gradient,
+      url(../images/library-mobile@2x-min.png);
+  }
+
+  @include tablet {
+    height: 216px;
+    background-image: $bg-header-gradient, url(../images/library-tablet-min.png);
+
+    @include retina {
+      background-image: $bg-header-gradient,
+        url(../images/library-tablet@2x-min.png);
+    }
+  }
+
+  @include desktop {
+    background-image: $bg-header-gradient,
+      url(../images/library-desktop-min.png);
+
+    @include retina {
+      background-image: $bg-header-gradient,
+        url(../images/library-desktop@2x-min.png);
+    }
+  }
+}
+
+.header__wrap--btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.header__btn {
+  width: 148px;
+  height: 42px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  border-color: white;
+  background-color: transparent;
+
+  &:first-child {
+    margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    border: none;
+    filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+  }
+}
+
+.header__btn--active {
+  background-color: $accentColor;
+  border: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.logo__icon {
+  margin-right: 8px;
+  stroke: $headerTextColor;
+  fill: transparent;
+  animation: 4s rotate infinite linear;
+}
+
+.header__logo:hover .logo__icon,
+.header__logo:focus .logo__icon {
+  stroke: $accentColor;
+}
+
+.header__logo:hover .logo__text,
+.header__logo:focus .logo__text {
+  animation: Glow 0.5s ease infinite alternate;
+}
+
+@keyframes Glow {
+  from {
+    text-shadow: 0 0 10px $accentColor, 0 0 20px $accentColor,
+      0 0 30px $accentColor, 0 0 40px $accentColor, 0 0 70px $accentColor,
+      0 0 80px $accentColor, 0 0 100px $accentColor, 0 0 150px $accentColor;
+  }
+  to {
+    text-shadow: 0 0 5px $accentColor, 0 0 10px $accentColor,
+      0 0 15px $accentColor, 0 0 20px $accentColor, 0 0 35px $accentColor,
+      0 0 40px $accentColor, 0 0 50px $accentColor, 0 0 75px $accentColor;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.logo__text {
+  @include font(500, 30px, 1.2, $headerTextColor);
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  list-style: none;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.navigation__link {
+  @include font(500, 12px, 1.1, $headerTextColor);
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-top: 40px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover,
+  &:focus {
+    animation: Glow 0.5s ease infinite alternate;
+  }
+}
+
+.current.navigation__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: $errorColor;
+}
+
+.header__warning {
+  @include font(400, 14px, 1.14, $errorColor);
+  visibility: hidden;
+  margin-top: 20px;
+
+  @media screen and (max-width: 376px) {
+    text-align: initial;
+  }
+  @media screen and (min-width: 377px) {
+    text-align: center;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.highlighted {
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+}
+
+.js-library-buttons-block {
+  display: none;
+}
+
+.header__menu-link.active:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #ff001b;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
